@@ -30,11 +30,11 @@ Políticas Baseadas em Função (Managed Policies) e Políticas Inline:
 
 **Autenticação e Autorização:** O IAM garante que a identidade de quem está solicitando o acesso (autenticação) seja verificada e, em seguida, valida se essa identidade tem permissão para realizar a ação solicitada (autorização).
 
-Políticas de Controle de Acesso Baseadas em Recursos (Resource-Based Policies): São políticas que podem ser associadas diretamente a um recurso específico, como um bucket S3 ou uma fila SQS, e permitem o controle sobre quem pode acessar esse recurso específico.
+**Políticas de Controle de Acesso Baseadas em Recursos (Resource-Based Policies):** São políticas que podem ser associadas diretamente a um recurso específico, como um bucket S3 ou uma fila SQS, e permitem o controle sobre quem pode acessar esse recurso específico.
 
-Segurança de Acesso e Auditoria: O IAM permite o uso de logs de auditoria através do AWS CloudTrail, o que ajuda a monitorar e registrar todas as atividades de acesso e ações realizadas pelos usuários e serviços, contribuindo para a segurança e a conformidade.
+**Segurança de Acesso e Auditoria:** O IAM permite o uso de logs de auditoria através do AWS CloudTrail, o que ajuda a monitorar e registrar todas as atividades de acesso e ações realizadas pelos usuários e serviços, contribuindo para a segurança e a conformidade.
 
-Princípios de Mínimos Privilégios: No AWS IAM, a recomendação é conceder o mínimo de permissões necessárias para realizar uma tarefa, o que limita o risco de acessos indevidos.
+**Princípios de Mínimos Privilégios:** No AWS IAM, a recomendação é conceder o mínimo de permissões necessárias para realizar uma tarefa, o que limita o risco de acessos indevidos.
 
 Esses conceitos formam a base do AWS IAM e são fundamentais para configurar e gerenciar a segurança e o acesso dentro de uma conta AWS, ajudando a proteger recursos valiosos e garantir que apenas os usuários autorizados possam interagir com os sistemas de forma controlada e eficiente.
 
@@ -53,9 +53,9 @@ Permission Boundary: Estabelece um limite superior para essas permissões. Mesmo
 **Por que usar o Permission Boundary?**
 Delegação de acesso: Permite delegar a criação de usuários ou funções a administradores de diferentes departamentos, mantendo um controle centralizado sobre o máximo de permissões que eles podem ter. Por exemplo, um administrador de recursos de TI pode conceder permissões para gerenciar instâncias EC2, mas com o Permission Boundary, ele não poderá conceder permissões para deletar ou alterar configurações críticas, como VPCs ou IAM.
 
-Segurança aprimorada: Ao usar Permission Boundaries, é possível reduzir o risco de um usuário ou função obter permissões excessivas, limitando suas ações a um conjunto controlado de recursos e operações.
+**Segurança aprimorada:** Ao usar Permission Boundaries, é possível reduzir o risco de um usuário ou função obter permissões excessivas, limitando suas ações a um conjunto controlado de recursos e operações.
 
-Gerenciamento de permissões complexas: Em organizações com múltiplos níveis de administração, o Permission Boundary permite que os administradores defina regras precisas sobre quem pode fazer o quê, mantendo a governança sobre permissões de forma granular.
+**Gerenciamento de permissões complexas:** Em organizações com múltiplos níveis de administração, o Permission Boundary permite que os administradores defina regras precisas sobre quem pode fazer o quê, mantendo a governança sobre permissões de forma granular.
 
 **Como aplicar na prática;**
 No conceito da arquitetura desenvolvida um usuário terá acesso a console AWs por meio do navegador e nesta navegação ele permite que o usuário gerencie as instâncias EC2, crie containers e registre imagens, apenas isso, porém como uma forma de tentar burlar essa permissão apenas ele possui uma concessão de acesso ao IAM com o famoso *, entretanto, ele não conseguirá por possui o conceito do permissions boundary. 
